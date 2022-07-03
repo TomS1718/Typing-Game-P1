@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.display-timer {
+  position: absolute;
+  top: 10rem;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.display-score {
+  position: absolute;
+  bottom: 10rem;
+}
+
+.display-wpm {
+  position: absolute;
+  bottom: 15rem;
+}
+
+.quotebox {
+  position: fixed;
+  top: 25rem;
+}
+
+.textbox {
+  width: 300px;
+  height: 40px;
+  border-radius: 15px;
+
+}
