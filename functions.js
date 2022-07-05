@@ -3,33 +3,72 @@ const textBox = document.querySelector('#textbox')
 const displayScore = document.querySelector('#display-score')
 const displayTimer = document.querySelector('#display-timer')
 const displayWpm = document.querySelector('#display-wpm')
-const quoteInput = document.querySelector('quoteinput')
+const quoteInput = document.querySelector('input')
 
+const words = ["favor",
+  "respect",
+  "blame",
+  "half",
+  "viable",
+  "neighborhood",
+  "studio",
+  "bishop",
+  "approve",
+  "ridge",
+  "include",
+  "tear",
+  "club",
+  "stun",
+  "inject",
+  "shoot",
+  "offer",
+  "duke",
+  "concern",
+  "election",
+  "borrow",
+  "craft",
+  "kinship",
+  "knife",
+  "cream",
+  "gold",
+  "commission",
+  "sugar",
+  "verdict",
+  "fish",
+  "joint",
+  "spider",
+  "coach",
+  "crowd",
+  "exotic",
+  "distributor",
+  "bomber",
+  "dough",
+  "hospitality",
+  "requirement",
+  "personal",
+  "behead",
+  "legislation",
+  "chip",
+  "factor",
+  "tribe",
+  "advocate",
+  "reverse",
+  "register",
+  "goat"]
 
-// Generate random quote on screen
+  let randomWords = words[Math.floor(Math.random ()*words.length)]
+  getQuote.innerText = randomWords
 
-let quotes = "Many of life's failures are people who did not realize how close they were to success when they gave up. -Thomas A. Edison"
-
-console.log(quotebox)
-
-// accounts for current letter and creates a span tag per letter
-const currentWord = quotes.split('').map((char) => { const span = document.createElement('span');
-span.innerText = char;
-quotebox.appendChild(span);
-  return span;
-})
-
-const currentLetter = currentWord[0]
-currentLetter.classList.add('letter')
-
-
+  textBox.addEventListener('keydown', (key)=> {
+    console.log(key)
+  })
 // Game Timer
 
+// WPM counter
 
 // Reset Button
 
 
-// Highlight correct word
-
 // Highlight Incorrect word
+
 
