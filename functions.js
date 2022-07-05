@@ -2,8 +2,6 @@ const getQuote = document.querySelector('#quotebox')
 const textBox = document.querySelector('#textbox')
 const displayScore = document.querySelector('#display-score')
 const displayTimer = document.querySelector('#display-timer')
-const displayWpm = document.querySelector('#display-wpm')
-const quoteInput = document.querySelector('input')
 const notify = document.querySelector('#notify')
 let gameProgress = false;
 
@@ -63,7 +61,6 @@ const words = ["favor",
   getQuote.innerText = randomWords
 
 
-
   textBox.addEventListener('keydown', (key)=> {
   if(wordMatched()) {
     getQuote.innerText = words[Math.floor(Math.random ()*words.length)]
@@ -71,9 +68,8 @@ const words = ["favor",
     displayScore.innerHTML = Number(displayScore.innerHTML) + 1 // adds +1 to score on correct words
   }
   
-  if (gameProgress === false) {
-    gameTimer()
-  }
+
+
  })
 
 let endTime
@@ -82,8 +78,9 @@ let beginTime
  // game ends after 30 seconds
 function gameTimer() {
     gameProgress = true;
-    endTime = setInterval(gameOver, 5000)
+    endTime = setInterval(gameOver, 31000)
     beginTime = setInterval(updateTimer, 1000)
+    
 }
 
 // clears current intervals
@@ -92,13 +89,11 @@ function gameOver() {
   clearInterval(beginTime)
 }
 
-
 // start of game countdown
-let startTime = 5
+let startTime = 30
 function updateTimer() {
   startTime = startTime -1
   displayTimer.innerText = startTime 
-
 }
 
 // if displayed word matches the correct word typed. Notify as correct 
@@ -112,10 +107,6 @@ function wordMatched() {
   }
 } 
 
-
-
-
-// WPM counter
 
 // Reset Button
 

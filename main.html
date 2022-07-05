@@ -12,8 +12,7 @@
 
 <body>
 
-  <div class="display-timer" id="display-timer">0</div>
-  <div class="display-wpm" id="display-wpm">WPM:</div>
+  <div class="display-timer" id="display-timer">30</div>
   <div class="display-score">Score: <span id="display-score"></span></div>
   <div class="container" id="container">
     <div class="quotebox" id="quotebox"></div>
@@ -22,5 +21,10 @@
   <h3 id="notify"></h3>
 
 </body>
+<script>
+  window.addEventListener('load', (event) => {
+    gameTimer()
+  })
+</script>
 
 </html>

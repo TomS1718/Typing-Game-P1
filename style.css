@@ -11,19 +11,19 @@ body {
 }
 
 .display-timer {
-  position: absolute;
+  display: block;
   top: 6rem;
   font-weight: bold;
   font-size: 4rem;
 }
 
 .display-score {
-  position: absolute;
+  display: block;
   bottom: 10rem;
 }
 
 .display-wpm {
-  position: absolute;
+  display: block;
   bottom: 15rem;
 }
 
