@@ -5,7 +5,7 @@ const displayTimer = document.querySelector('#display-timer')
 const displayWpm = document.querySelector('#display-wpm')
 const quoteInput = document.querySelector('input')
 const notify = document.querySelector('#notify')
-
+let gameProgress = false;
 
 const words = ["favor",
   "respect",
@@ -61,17 +61,31 @@ const words = ["favor",
   let randomWords = words[Math.floor(Math.random ()*words.length)]
   getQuote.innerText = randomWords
 
+
+
   textBox.addEventListener('keydown', (key)=> {
   if(wordMatched()) {
     getQuote.innerText = words[Math.floor(Math.random ()*words.length)]
     textBox.value = ''
     
   }
-    
+  
+  if (gameProgress === false) {
+    gameTimer()
+  }
  })
 
+function gameTimer() {
+    gameProgress = true;
+    setInterval(gameOver, 5000)
+  
+}
 
+function gameOver() {
+  alert('Game Over')
+}
 
+// if displayed word = the correct word typed. Notify as correct 
 function wordMatched() {
   if(textBox.value === getQuote.innerText) {
     notify.innerHTML = 'Correct!!'
