@@ -7,6 +7,7 @@ const quoteInput = document.querySelector('input')
 const notify = document.querySelector('#notify')
 let gameProgress = false;
 
+
 const words = ["favor",
   "respect",
   "blame",
@@ -67,7 +68,7 @@ const words = ["favor",
   if(wordMatched()) {
     getQuote.innerText = words[Math.floor(Math.random ()*words.length)]
     textBox.value = ''
-    
+    displayScore.innerHTML = Number(displayScore.innerHTML) + 1 // adds +1 to score on correct words
   }
   
   if (gameProgress === false) {
@@ -78,22 +79,26 @@ const words = ["favor",
 let endTime
 let beginTime
 
- // game ends after 5 seconds
+ // game ends after 30 seconds
 function gameTimer() {
     gameProgress = true;
     endTime = setInterval(gameOver, 5000)
     beginTime = setInterval(updateTimer, 1000)
 }
 
+// clears current intervals
 function gameOver() {
   clearInterval(endTime)
   clearInterval(beginTime)
 }
 
-let startTime = 60
+
+// start of game countdown
+let startTime = 5
 function updateTimer() {
   startTime = startTime -1
-  displayTimer.innerText = startTime
+  displayTimer.innerText = startTime 
+
 }
 
 // if displayed word matches the correct word typed. Notify as correct 
@@ -107,13 +112,13 @@ function wordMatched() {
   }
 } 
 
-// Game Timer
+
+
 
 // WPM counter
 
 // Reset Button
 
 
-// Highlight Incorrect word
 
 
