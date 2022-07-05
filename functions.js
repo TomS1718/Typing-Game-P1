@@ -4,6 +4,8 @@ const displayScore = document.querySelector('#display-score')
 const displayTimer = document.querySelector('#display-timer')
 const displayWpm = document.querySelector('#display-wpm')
 const quoteInput = document.querySelector('input')
+const notify = document.querySelector('#notify')
+
 
 const words = ["favor",
   "respect",
@@ -60,8 +62,26 @@ const words = ["favor",
   getQuote.innerText = randomWords
 
   textBox.addEventListener('keydown', (key)=> {
-    console.log(key)
-  })
+  if(wordMatched()) {
+    getQuote.innerText = words[Math.floor(Math.random ()*words.length)]
+    textBox.value = ''
+    
+  }
+    
+ })
+
+
+
+function wordMatched() {
+  if(textBox.value === getQuote.innerText) {
+    notify.innerHTML = 'Correct!!'
+    return true;
+  } else {
+    notify.innerHTML = ''
+    return false;
+  }
+} 
+
 // Game Timer
 
 // WPM counter
