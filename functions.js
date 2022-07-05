@@ -75,17 +75,28 @@ const words = ["favor",
   }
  })
 
+let endTime
+let beginTime
+
+ // game ends after 5 seconds
 function gameTimer() {
     gameProgress = true;
-    setInterval(gameOver, 5000)
-  
+    endTime = setInterval(gameOver, 5000)
+    beginTime = setInterval(updateTimer, 1000)
 }
 
 function gameOver() {
-  alert('Game Over')
+  clearInterval(endTime)
+  clearInterval(beginTime)
 }
 
-// if displayed word = the correct word typed. Notify as correct 
+let startTime = 60
+function updateTimer() {
+  startTime = startTime -1
+  displayTimer.innerText = startTime
+}
+
+// if displayed word matches the correct word typed. Notify as correct 
 function wordMatched() {
   if(textBox.value === getQuote.innerText) {
     notify.innerHTML = 'Correct!!'
