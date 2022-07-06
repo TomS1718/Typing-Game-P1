@@ -35,21 +35,28 @@ body {
 }
 
 .button {
-  border-style: solid;
   font-size: 5.6rem;
   border-radius: 1rem;
   transition-duration: 0.4s;
   text-decoration: none;
-  color: black;
+  color: rgb(78, 76, 76);
   align-items: center;
   justify-content: center;
   transform: translate(-50%, -50%);
   top: 50%;
   position: fixed;
+  /* css text glow CREDIT: https://css-tricks.com/how-to-create-neon-text-with-css/*/
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px rgb(234, 236, 91),
+    0 0 42px rgb(157, 255, 0),
+    0 0 82px rgb(191, 255, 0),
+    0 0 92px rgb(255, 196, 0),
+    0 0 102px rgb(251, 255, 0),
+    0 0 151px rgb(183, 255, 0);
 }
 
 .button:hover {
   color: rgb(255, 255, 255);
-  background-color: rgb(74, 74, 91);
-
 }
