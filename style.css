@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-body {
+.startscreen {
   min-height: 100vh;
   margin: auto;
   display: flex;
@@ -12,32 +12,79 @@ body {
   overflow: hidden;
 }
 
+.mainscreen {
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.mainbackground {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.display-score {
+  color: rgb(226, 216, 216);
+  top: 400px;
+  position: relative;
+  margin: 1rem;
+  font-size: 2rem;
+}
 
 .display-timer {
   position: absolute;
-  align-items: center;
-  top: 6rem;
+  top: 300px;
   font-weight: bold;
   font-size: 4rem;
+  color: rgb(227, 129, 63);
+  text-shadow:
+    0 0 7px rgba(52, 42, 33, 0.985),
+    0 0 10px rgb(209, 126, 58),
+    0 0 21px rgb(220, 125, 54),
+    0 0 42px rgb(67, 63, 49),
+    0 0 82px rgb(227, 210, 190),
+    0 0 92px rgb(220, 95, 50),
+    0 0 102px rgb(159, 39, 39),
+    0 0 151px rgb(200, 105, 37);
 }
 
 .quotebox {
   font-size: 2.7rem;
   font-weight: bold;
+  right: -50px;
+  position: relative;
+  top: 500px;
+  margin: 1rem;
 }
 
 .textbox {
-  width: 200px;
+  width: 220px;
   height: 2rem;
   border-radius: 1rem;
+  position: relative;
+  right: -10px;
+  top: 500px;
+  margin: 1rem;
+  padding: .7rem 1rem;
+  font-size: 20px;
 }
 
 .container {
-  text-decoration: none;
-  color: rgb(233, 147, 85);
-  transform: translate(-50%, -50%);
-  top: 50%;
-  position: fixed;
+  color: rgb(234, 226, 72);
+  text-shadow:
+    0 0 7px rgba(52, 42, 33, 0.985),
+    0 0 10px rgb(120, 115, 111),
+    0 0 21px rgb(223, 215, 210),
+    0 0 42px rgb(80, 73, 49),
+    0 0 82px rgb(227, 210, 190),
+    0 0 92px rgb(147, 180, 157),
+    0 0 102px rgb(219, 219, 219),
+    0 0 151px rgb(82, 96, 83);
 }
 
 .restartgame {
@@ -45,7 +92,15 @@ body {
   height: 2rem;
   width: 160px;
   border-radius: 2rem;
-  bottom: 10rem;
+  position: relative;
+  top: 700px;
+  background-color: rgb(229, 144, 230);
+  font-size: 1rem;
+}
+
+.restartgame:hover {
+  background-color: rgb(255, 255, 255);
+  transition: .25s;
 }
 
 .button {
@@ -65,14 +120,14 @@ body {
   100% {
     /* Larger blur radius */
     text-shadow:
-      0 0 7px rgba(231, 197, 161, 0.985),
-      0 0 10px rgb(239, 168, 93),
-      0 0 21px rgb(229, 207, 196),
-      0 0 42px rgb(226, 188, 52),
-      0 0 82px rgb(227, 210, 190),
+      0 0 7px rgba(50, 33, 16, 0.985),
+      0 0 10px rgb(37, 25, 13),
+      0 0 21px rgb(79, 50, 36),
+      0 0 42px rgb(179, 166, 121),
+      0 0 82px rgb(74, 85, 27),
       0 0 92px rgb(198, 162, 43),
       0 0 102px rgb(88, 74, 74),
-      0 0 151px rgb(195, 141, 110);
+      0 0 151px rgb(98, 66, 47);
   }
 
   40% {
@@ -91,4 +146,22 @@ body {
 
 .button:hover {
   color: rgb(255, 255, 255);
+  transition: .25s;
+}
+
+#notify {
+  font-size: 25px;
+  color: rgb(13, 251, 5);
+  position: fixed;
+  top: 700px;
+  text-shadow:
+    0 0 7px rgba(233, 228, 223, 0.985),
+    0 0 10px rgb(220, 214, 208),
+    0 0 21px rgb(223, 215, 210),
+    0 0 42px rgb(171, 169, 162),
+    0 0 82px rgb(227, 210, 190),
+    0 0 92px rgb(6, 237, 75),
+    0 0 102px rgb(219, 219, 219),
+    0 0 151px rgb(37, 218, 43);
+
 }

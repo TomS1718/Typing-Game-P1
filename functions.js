@@ -35,8 +35,7 @@ const words = ["favor",
   "commission",
   "sugar",
   "verdict",
-  "fish",
-  "joint",
+  "fish",,
   "spider",
   "coach",
   "crowd",
@@ -54,6 +53,14 @@ const words = ["favor",
   "advocate",
   "reverse",
   "register",
+  "cinema",
+  "innovation",
+  "debate",
+  "operation",
+  "deficiency",
+  "wage",
+  "reign",
+  "pumpkin",
   "goat"]
 
 // displays the randomized words
@@ -98,6 +105,9 @@ function wordMatched() {
   if(textBox.value === getQuote.innerText) {
     notify.innerHTML = 'Correct!!'
     return true;
+  } else {
+    notify.innerHTML = ''
+    return false;
   }
 } 
 
