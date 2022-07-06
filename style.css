@@ -34,27 +34,47 @@ body {
   border-radius: 1rem;
 }
 
+
+
 .button {
   font-size: 5.6rem;
   border-radius: 1rem;
   transition-duration: 0.4s;
   text-decoration: none;
-  color: rgb(78, 76, 76);
-  align-items: center;
-  justify-content: center;
+  color: rgb(224, 107, 24);
   transform: translate(-50%, -50%);
   top: 50%;
   position: fixed;
   /* css text glow CREDIT: https://css-tricks.com/how-to-create-neon-text-with-css/*/
-  text-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px rgb(234, 236, 91),
-    0 0 42px rgb(157, 255, 0),
-    0 0 82px rgb(191, 255, 0),
-    0 0 92px rgb(255, 196, 0),
-    0 0 102px rgb(251, 255, 0),
-    0 0 151px rgb(183, 255, 0);
+  animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+  100% {
+    /* Larger blur radius */
+    text-shadow:
+      0 0 7px rgba(236, 155, 68, 0.985),
+      0 0 10px rgb(240, 145, 43),
+      0 0 21px rgb(226, 121, 72),
+      0 0 42px rgb(226, 188, 52),
+      0 0 82px rgb(220, 140, 43),
+      0 0 92px rgb(198, 162, 43),
+      0 0 102px rgb(88, 74, 74),
+      0 0 151px rgb(195, 141, 110);
+  }
+
+  30% {
+    /* Smaller blur radius */
+    text-shadow:
+      0 0 7px rgba(255, 255, 255, 0.985),
+      0 0 10px rgb(203, 199, 199),
+      0 0 21px rgb(238, 167, 134),
+      0 0 42px rgb(181, 181, 180),
+      0 0 82px rgb(159, 158, 157),
+      0 0 92px rgb(139, 137, 133),
+      0 0 102px rgb(228, 160, 126),
+      0 0 151px rgb(231, 215, 205);
+  }
 }
 
 .button:hover {
