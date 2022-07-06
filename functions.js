@@ -76,8 +76,7 @@ let beginTime
 function gameTimer() {
     gameProgress = true;
     endTime = setInterval(gameOver, 31000)
-    beginTime = setInterval(updateTimer, 1000)
-    
+    beginTime = setInterval(updateTimer, 1000) 
 }
 
 // clears current intervals
@@ -102,8 +101,6 @@ function wordMatched() {
   }
 } 
 
-
-// Reset Button
 
 
 

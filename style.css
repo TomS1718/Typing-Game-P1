@@ -9,11 +9,9 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-.startscreen {
   overflow: hidden;
 }
+
 
 .display-timer {
   position: absolute;
@@ -34,36 +32,50 @@ body {
   border-radius: 1rem;
 }
 
+.container {
+  text-decoration: none;
+  color: rgb(233, 147, 85);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  position: fixed;
+}
 
+.restartgame {
+  margin: 2rem;
+  height: 2rem;
+  width: 160px;
+  border-radius: 2rem;
+  bottom: 10rem;
+}
 
 .button {
   font-size: 5.6rem;
   border-radius: 1rem;
   transition-duration: 0.4s;
   text-decoration: none;
-  color: rgb(224, 107, 24);
+  color: rgb(233, 147, 85);
   transform: translate(-50%, -50%);
   top: 50%;
   position: fixed;
-  /* css text glow CREDIT: https://css-tricks.com/how-to-create-neon-text-with-css/*/
-  animation: animate 10s linear infinite;
+  /* css text glow CREDIT: https://css-tricks.com/how-to-create-neon-text-with-css/ */
+  animation: animate 5s linear infinite;
 }
 
 @keyframes animate {
   100% {
     /* Larger blur radius */
     text-shadow:
-      0 0 7px rgba(236, 155, 68, 0.985),
-      0 0 10px rgb(240, 145, 43),
-      0 0 21px rgb(226, 121, 72),
+      0 0 7px rgba(231, 197, 161, 0.985),
+      0 0 10px rgb(239, 168, 93),
+      0 0 21px rgb(229, 207, 196),
       0 0 42px rgb(226, 188, 52),
-      0 0 82px rgb(220, 140, 43),
+      0 0 82px rgb(227, 210, 190),
       0 0 92px rgb(198, 162, 43),
       0 0 102px rgb(88, 74, 74),
       0 0 151px rgb(195, 141, 110);
   }
 
-  30% {
+  40% {
     /* Smaller blur radius */
     text-shadow:
       0 0 7px rgba(255, 255, 255, 0.985),
