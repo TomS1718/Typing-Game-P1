@@ -3,18 +3,23 @@
 }
 
 body {
-  justify-content: center;
+  min-height: 100vh;
+  margin: auto;
+  background-color: rgb(100, 151, 196);
   display: flex;
   align-items: center;
-  min-height: 100vh;
-  margin: 0;
+  justify-content: center;
+  flex-direction: column;
+
 }
 
 .display-timer {
+  align-items: center;
   display: block;
   top: 6rem;
   font-weight: bold;
   font-size: 4rem;
+
 }
 
 .display-score {
@@ -28,14 +33,13 @@ body {
 }
 
 .quotebox {
-  text-align: center;
-  font-size: 20px;
+  font-size: 35px;
+  font-weight: bold;
 }
 
 .textbox {
-
-  width: 300px;
+  width: 200px;
   height: 40px;
   border-radius: 15px;
-  padding: 1rem;
+
 }

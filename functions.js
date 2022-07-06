@@ -57,20 +57,17 @@ const words = ["favor",
   "register",
   "goat"]
 
-  let randomWords = words[Math.floor(Math.random ()*words.length)]
+let randomWords = words[Math.floor(Math.random ()*words.length)]
   getQuote.innerText = randomWords
 
 
-  textBox.addEventListener('keydown', (key)=> {
+textBox.addEventListener('keydown', (key)=> {
   if(wordMatched()) {
     getQuote.innerText = words[Math.floor(Math.random ()*words.length)]
     textBox.value = ''
     displayScore.innerHTML = Number(displayScore.innerHTML) + 1 // adds +1 to score on correct words
-  }
-  
-
-
- })
+  } 
+})
 
 let endTime
 let beginTime
