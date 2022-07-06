@@ -3,7 +3,7 @@ const textBox = document.querySelector('#textbox')
 const displayScore = document.querySelector('#display-score')
 const displayTimer = document.querySelector('#display-timer')
 const notify = document.querySelector('#notify')
-let gameProgress = false;
+
 
 
 const words = ["favor",
@@ -47,7 +47,6 @@ const words = ["favor",
   "hospitality",
   "requirement",
   "personal",
-  "behead",
   "legislation",
   "chip",
   "factor",
@@ -57,14 +56,15 @@ const words = ["favor",
   "register",
   "goat"]
 
+// displays the randomized words
 let randomWords = words[Math.floor(Math.random ()*words.length)]
   getQuote.innerText = randomWords
 
-
-textBox.addEventListener('keydown', (key)=> {
+// if word is correct, randomize new word
+textBox.addEventListener('keydown', () => {
   if(wordMatched()) {
     getQuote.innerText = words[Math.floor(Math.random ()*words.length)]
-    textBox.value = ''
+    textBox.value = '' // current text will clear once correct
     displayScore.innerHTML = Number(displayScore.innerHTML) + 1 // adds +1 to score on correct words
   } 
 })
@@ -84,9 +84,10 @@ function gameTimer() {
 function gameOver() {
   clearInterval(endTime)
   clearInterval(beginTime)
+  alert('Game Over')
 }
 
-// start of game countdown
+// countdown of start game
 let startTime = 30
 function updateTimer() {
   startTime = startTime -1
@@ -98,9 +99,6 @@ function wordMatched() {
   if(textBox.value === getQuote.innerText) {
     notify.innerHTML = 'Correct!!'
     return true;
-  } else {
-    notify.innerHTML = ''
-    return false;
   }
 } 
 
