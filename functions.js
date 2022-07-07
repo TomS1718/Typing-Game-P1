@@ -100,7 +100,7 @@ function updateTimer() {
   displayTimer.innerText = startTime 
 }
 
-// if displayed word matches the correct word typed. Notify as correct 
+// if displayed word matches the correct word typed. Notify as correct else clear correct
 function wordMatched() {
   if(textBox.value === getQuote.innerText) {
     notify.innerHTML = 'Correct!!'
