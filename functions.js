@@ -90,7 +90,7 @@ function gameTimer() {
 function gameOver() {
   clearInterval(endTime)
   clearInterval(beginTime)
-  alert('Game Over')
+  // alert('Times Up!!')
 }
 
 // countdown of start game
