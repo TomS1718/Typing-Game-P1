@@ -5,9 +5,8 @@ const displayTimer = document.querySelector('#display-timer')
 const notify = document.querySelector('#notify')
 
 
-
-const words = ["favor",
-  "respect",
+let words = ["favor",
+  "respect",  
   "blame",
   "half",
   "viable",
@@ -61,11 +60,13 @@ const words = ["favor",
   "wage",
   "reign",
   "pumpkin",
-  "goat"]
+  "goat"
+]
+
 
 // displays the randomized words
 let randomWords = words[Math.floor(Math.random ()*words.length)]
-  getQuote.innerText = randomWords
+    getQuote.innerText = randomWords
 
 // if word is correct, randomize new word
 textBox.addEventListener('keydown', () => {
@@ -73,6 +74,7 @@ textBox.addEventListener('keydown', () => {
     getQuote.innerText = words[Math.floor(Math.random ()*words.length)]
     textBox.value = '' // current text will clear once correct
     displayScore.innerHTML = Number(displayScore.innerHTML) + 1 // adds +1 to score on correct words
+    console.log(getQuote)
   } 
 })
 
@@ -90,7 +92,8 @@ function gameTimer() {
 function gameOver() {
   clearInterval(endTime)
   clearInterval(beginTime)
-  // alert('Times Up!!')
+  alert('Times Up!!')
+
 }
 
 // countdown of start game
@@ -99,6 +102,7 @@ function updateTimer() {
   startTime = startTime -1
   displayTimer.innerText = startTime 
 }
+
 
 // if displayed word matches the correct word typed. Notify as correct else clear correct
 function wordMatched() {
@@ -111,7 +115,10 @@ function wordMatched() {
   }
 } 
 
-
-
+// restart game
+const resetButton = document.querySelector('.restartgame')
+resetButton.addEventListener('click', () => {
+  window.location.reload(true)
+})
 
 

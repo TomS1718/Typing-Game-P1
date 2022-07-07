@@ -11,7 +11,7 @@
 ### **_Description_**
 
 This is a browser game where you will test your typing skills.
-Randomly generated sentences or quotes will appear on the screen and your objective is to type in the words to complete the paragraph before the timer ends.
+A randomly generated word will appear on the screen and your objective is to type in the word correctly before the timer ends.
 
 ---
 
@@ -23,6 +23,14 @@ Randomly generated sentences or quotes will appear on the screen and your object
 
 ---
 
-### **_Trello Board_**
 
-#### [Trello Board](https://trello.com/b/Mk2tWfxy/speed-typing-game-p1)
+
+### **_Getting Started_**
+
+ - Click on the Trello Board hyperlink to view the progress [Trello Board](https://trello.com/b/Mk2tWfxy/speed-typing-game-p1)
+ - You can visit the project that was deployed on [Surge](https://harmonious-account.surge.sh/)
+
+
+ ### **_Credits_**
+- Background Image: [Starting Screen](https://i.imgur.com/b5FwDEu.jpg)
+- Second Background Image: [Main Screen](https://i.imgur.com/dHtnSQM.jpg)
