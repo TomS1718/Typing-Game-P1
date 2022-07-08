@@ -11,7 +11,7 @@
 ### **_Description_**
 
 This is a browser game where you will test your typing skills.
-A randomly generated word will appear on the screen and your objective is to type in the word correctly before the timer ends.
+A randomly generated word will appear on the screen and your objective is to type in as many words correctly before the timer ends.
 
 ---
 
@@ -34,3 +34,4 @@ A randomly generated word will appear on the screen and your objective is to typ
  ### **_Credits_**
 - Background Image: [Starting Screen](https://i.imgur.com/b5FwDEu.jpg)
 - Second Background Image: [Main Screen](https://i.imgur.com/dHtnSQM.jpg)
+- CSS Glows [CSS](https://css-tricks.com/how-to-create-neon-text-with-css/)

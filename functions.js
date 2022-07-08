@@ -66,7 +66,7 @@ let words = ["favor",
 
 // displays the randomized words
 let randomWords = words[Math.floor(Math.random ()*words.length)]
-    getQuote.innerText = randomWords
+  getQuote.innerText = randomWords
 
 // if word is correct, randomize new word
 textBox.addEventListener('keydown', () => {
@@ -83,7 +83,7 @@ let beginTime
 
  // game ends after 30 seconds
 function gameTimer() {
-    gameProgress = true;
+  gameProgress = true;
     endTime = setInterval(gameOver, 31000)
     beginTime = setInterval(updateTimer, 1000) 
 }
@@ -93,16 +93,14 @@ function gameOver() {
   clearInterval(endTime)
   clearInterval(beginTime)
   alert('Times Up!!')
-
 }
 
 // countdown of start game
 let startTime = 30
-function updateTimer() {
-  startTime = startTime -1
-  displayTimer.innerText = startTime 
+  function updateTimer() {
+    startTime = startTime -1
+    displayTimer.innerText = startTime 
 }
-
 
 // if displayed word matches the correct word typed. Notify as correct else clear correct
 function wordMatched() {
@@ -117,8 +115,6 @@ function wordMatched() {
 
 // restart game
 const resetButton = document.querySelector('.restartgame')
-resetButton.addEventListener('click', () => {
-  window.location.reload(true)
+  resetButton.addEventListener('click', () => {
+    window.location.reload(true)
 })
-
-
