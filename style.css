@@ -10,6 +10,11 @@
   justify-content: center;
   flex-direction: column;
   overflow: hidden;
+  /* background source https://www.hdwallpapers.in/sunset_neon_artwork-wallpapers.html */
+  background-image: url('https://i.imgur.com/b5FwDEu.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .mainscreen {
@@ -162,7 +167,8 @@
 }
 
 p {
-  position: fixed;
+  position: relative;
+  top: 200px;
   font-size: 26px;
   color: rgb(233, 147, 85);
   text-shadow:

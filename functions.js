@@ -74,7 +74,6 @@ textBox.addEventListener('keydown', () => {
     getQuote.innerText = words[Math.floor(Math.random ()*words.length)]
     textBox.value = '' // current text will clear once correct
     displayScore.innerHTML = Number(displayScore.innerHTML) + 1 // adds +1 to score on correct words
-    console.log(getQuote)
   } 
 })
 
